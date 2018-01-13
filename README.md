@@ -1,11 +1,26 @@
-fl [![License](http://img.shields.io/:license-gpl3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0.html) [![Build Status](https://travis-ci.org/opennota/fl.png?branch=master)](https://travis-ci.org/opennota/fl)
+fl [![License](http://img.shields.io/:license-gpl3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0.html) [![Build Status](https://travis-ci.org/amatashkin/fl.svg?branch=master)](https://travis-ci.org/amatashkin/fl)
 ==
+
+Dockerized fl. Requires standalone Tor or I2P host.
 
 fl is a reverse proxy to the Flibusta e-library via Tor or I2P.
 
+## Docker build
+
+    docker build . -t fl
+
+## Docker run
+
+    docker run -d -p 8080:8080 fl fl [paramaters]
+    
+Example:
+
+    docker run -d -p 8080:8080 fl fl -tor torhost.local:9050
+
+
 ## Install
 
-    go get -u github.com/opennota/fl
+    go get -u github.com/amatashkin/fl
 
 ## Use
 
@@ -14,3 +29,7 @@ When invoked without parameters, `fl` chooses which network to use. First it tri
 For the options run
 
     fl -help
+
+
+    
+Credits: @opennota for the original fl https://github.com/opennota/fl
