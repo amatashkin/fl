@@ -1,0 +1,12 @@
+name: default
+
+kind: pipeline
+type: docker
+
+steps:
+- name: publish
+  image: plugins/docker
+  settings:
+    repo: github-amatashkin/fl
+    tags: [ "${DRONE_COMMIT_SHA:0:7}","latest" ]
+    registry: registry.amatashkin.com
