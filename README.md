@@ -1,7 +1,5 @@
-fl
-==
-
 Dockerized fl. Requires standalone Tor or I2P host.
+==
 
 fl is a reverse proxy to the Flibusta e-library via Tor or I2P.
 
@@ -11,16 +9,11 @@ fl is a reverse proxy to the Flibusta e-library via Tor or I2P.
 
 ## Docker run
 
-    docker run -d -p 8080:8080 fl fl [paramaters]
+    docker run -d -p 8080:8080 fl [paramaters]
     
 Example:
 
-    docker run -d -p 8080:8080 fl fl -tor torhost.local:9050
-
-
-## Install
-
-    go get -u github.com/amatashkin/fl
+    docker run -d -p 8080:8080 fl -tor torhost.local:9050
 
 ## Use
 
@@ -28,7 +21,7 @@ When invoked without parameters, `fl` chooses which network to use. First it tri
 
 For the options run
 
-    fl -help
+    docker run --rm fl -help
 
 
     
