@@ -1,5 +1,8 @@
 FROM golang:alpine
 
+# Build arguments
+ARG BUILD_VERSION
+
 WORKDIR /build
 
 COPY . .
@@ -13,10 +16,9 @@ WORKDIR /app
 COPY --from=0 /build/fl .
 EXPOSE 8080
 
-ENTRYPOINT ["/app/fl"]
+HEALTHCHECK CMD wget --no-verbose --tries=1 --spider http://localhost:8080 || exit 1
 
-# Build arguments
-ARG BUILD_VERSION
+ENTRYPOINT ["/app/fl"]
 
 # Labels
 LABEL \
