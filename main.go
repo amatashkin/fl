@@ -25,7 +25,7 @@ import (
 )
 
 const (
-	torHost   = "flibustahezeous3.onion"
+	torHost   = "flibustaongezhld6dibs2dps6vm4nvqg2kp7vgowbu76tzopgnhazqd.onion"
 	i2pHost   = "flibusta.i2p"
 	i2pBase32 = "zmw2cyw2vj7f6obx3msmdvdepdhnw2ctc4okza2zjxlukkdfckhq.b32.i2p"
 )
