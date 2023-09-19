@@ -7,9 +7,9 @@ steps:
 - name: publish
   image: plugins/docker
   settings:
-    repo: registry.amatashkin.com/fl
+    repo: git.amatashkin.com/github-amatashkin/fl
     tags: [ "${DRONE_COMMIT_SHA:0:7}","latest" ]
-    registry: registry.amatashkin.com
+    registry: git.amatashkin.com
     username:
       from_secret: docker_local_username
     password:
